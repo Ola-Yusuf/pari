@@ -61,12 +61,12 @@ class ProjectController extends Controller
             $data['projectFile'] = $fileName;
         }
         $total = Project::all()->count();
-        $data['serial'] = 'Proj-'.$total.$this->generateRandomString(3);
+        $data['serial'] = 'Ser-'.$total.$this->generateRandomString(3);
 
         Project::create($data);
         
         $message['type'] = 'success';
-        $message['content'] = 'Project Created Successfully';
+        $message['content'] = 'Service Created Successfully';
         Session::flash('message',$message);
 
         return redirect()->route('admin.view.all.project');
@@ -115,7 +115,7 @@ class ProjectController extends Controller
         Project::find(Crypt::decrypt($id))->update($data);
         
         $message['type'] = 'success';
-        $message['content'] = 'Project Update Successful';
+        $message['content'] = 'Service Update Successful';
         Session::flash('message',$message);
 
         return redirect()->route('admin.show.project',$id);

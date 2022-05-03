@@ -28,6 +28,7 @@ class ProjectFactory extends Factory
         File::makeDirectory(storage_path('public/project files'), 0777, true, true);
         
         return [
+            'category' => $this->faker->sentence(6),
             'title' => $this->faker->sentence(6),
             'serial' => $this->faker->regexify('[A-Za-z0-9]{5}'),
             'description' => $this->faker->paragraph(3),

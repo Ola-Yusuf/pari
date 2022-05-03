@@ -11,7 +11,7 @@ Route::prefix('/profile')->group(function () {
   Route::post('/', 'ProfileController@updateProfile')->name('update.profile');
 });
 
-Route::prefix('/project')->group(function () {
+Route::prefix('/service')->group(function () {
   Route::get('/', 'ProjectController@index')->name('view.all.project');
   Route::get('/detail/{id}', 'ProjectController@show')->name('show.project');
   Route::get('/edit/{id}', 'ProjectController@edit')->name('edit.project');

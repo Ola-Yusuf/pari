@@ -30,13 +30,16 @@
             <div class="avatar-xxl avatar-indicators avatar-online me-2
                 position-relative d-flex justify-content-end
                 align-items-end mt-n10">
-              <img src="{{Auth::guard('client')->user()->avatar != null ? asset(Auth::guard('client')->user()->avatar) : asset('defaultAvatar.png')}}" class="avatar-xxl
+              <img
+                src="{{Auth::guard('client')->user()->avatar != null ? asset(Auth::guard('client')->user()->avatar) : asset('defaultAvatar.png')}}"
+                class="avatar-xxl
                   rounded-circle border border-4 border-white-color-40" alt="">
             </div>
             <!-- text -->
             <div class="lh-1">
               <h2 class="mb-0">{{Auth::guard('client')->user()->fname}}
-                <a href="#!" class="text-decoration-none" data-bs-toggle="tooltip" data-placement="top" title="" data-original-title="Beginner">
+                <a href="#!" class="text-decoration-none" data-bs-toggle="tooltip" data-placement="top" title=""
+                  data-original-title="Beginner">
 
                 </a>
               </h2>
@@ -55,46 +58,50 @@
   <div class="py-6">
     <!-- row -->
     <div class="row">
-        <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
-          <!-- card -->
-          <div class="card">
-            <!-- card body -->
-            <div class="card-body">
-              <!-- card title -->
-              {{-- <h4 class="card-title mb-4">About Me</h4> --}}
-              <!-- row -->
-              <div class="row">
-                <div class="col-12 mb-5">
-                  <!-- text -->
-                  <h6 class="text-uppercase fs-5 ls-2">Position/Role </h6>
-                  <p class="mb-0">CMS Client {{Auth::guard('client')->user()->id}}</p>
-                </div>
-                <div class="col-6 mb-5">
-                  <h6 class="text-uppercase fs-5 ls-2">Username </h6>
-                  <p class="mb-0">{{Auth::guard('client')->user()->username ? Auth::guard('client')->user()->username :'xxxx' }}</p>
-                </div>
-                <div class="col-6 mb-5">
-                  <h6 class="text-uppercase fs-5 ls-2">Gender </h6>
-                  <p class="mb-0">{{Auth::guard('client')->user()->gender ? Auth::guard('client')->user()->gender :'xxxx' }}</p>
-                </div>
-                <div class="col-6 mb-5">
-                  <h6 class="text-uppercase fs-5 ls-2">Phone </h6>
-                  <p class="mb-0">{{Auth::guard('client')->user()->tel ? Auth::guard('client')->user()->tel :'xxx-xxxx-xxxx' }}</p>
-                </div>
-                <div class="col-6">
-                  <h6 class="text-uppercase fs-5 ls-2">Email </h6>
-                  <p class="mb-0">{{Auth::guard('client')->user()->email}}</p>
-                </div>
-                <div class="col-12">
-                  <h6 class="text-uppercase fs-5 ls-2">Location
-                  </h6>
-                  <p class="mb-0">{{Auth::guard('client')->user()->address ? Auth::guard('client')->user()->address :'xxx-xxxx-xxxx' }}</p>
-                </div>
+      <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
+        <!-- card -->
+        <div class="card">
+          <!-- card body -->
+          <div class="card-body">
+            <!-- card title -->
+            {{-- <h4 class="card-title mb-4">About Me</h4> --}}
+            <!-- row -->
+            <div class="row">
+              <div class="col-12 mb-5">
+                <!-- text -->
+                <h6 class="text-uppercase fs-5 ls-2">Position/Role </h6>
+                <p class="mb-0">Client {{Auth::guard('client')->user()->id}}</p>
+              </div>
+              <div class="col-6 mb-5">
+                <h6 class="text-uppercase fs-5 ls-2">Username </h6>
+                <p class="mb-0">{{Auth::guard('client')->user()->username ? Auth::guard('client')->user()->username
+                  :'xxxx' }}</p>
+              </div>
+              <div class="col-6 mb-5">
+                <h6 class="text-uppercase fs-5 ls-2">Gender </h6>
+                <p class="mb-0">{{Auth::guard('client')->user()->gender ? Auth::guard('client')->user()->gender :'xxxx'
+                  }}</p>
+              </div>
+              <div class="col-6 mb-5">
+                <h6 class="text-uppercase fs-5 ls-2">Phone </h6>
+                <p class="mb-0">{{Auth::guard('client')->user()->tel ? Auth::guard('client')->user()->tel
+                  :'xxx-xxxx-xxxx' }}</p>
+              </div>
+              <div class="col-6">
+                <h6 class="text-uppercase fs-5 ls-2">Email </h6>
+                <p class="mb-0">{{Auth::guard('client')->user()->email}}</p>
+              </div>
+              <div class="col-12">
+                <h6 class="text-uppercase fs-5 ls-2">Location
+                </h6>
+                <p class="mb-0">{{Auth::guard('client')->user()->address ? Auth::guard('client')->user()->address
+                  :'xxx-xxxx-xxxx' }}</p>
               </div>
             </div>
           </div>
         </div>
-      
+      </div>
+
 
     </div>
   </div>

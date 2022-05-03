@@ -53,13 +53,14 @@
                 <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse"
                     data-bs-target="#navAuthentication" aria-expanded="false" aria-controls="navAuthentication">
                     <i data-feather="layers" class="nav-icon icon-xs me-2">
-                    </i> Services
+                    </i> Services To Render
                 </a>
                 <div id="navAuthentication" class="collapse " data-bs-parent="#sideNavbar">
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link " href="{{route('admin.new.project')}}"> Add New Service</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link  " href="{{route('admin.view.all.project')}}"> View All Service</a>
                         </li>

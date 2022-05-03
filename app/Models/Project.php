@@ -12,7 +12,7 @@ class Project extends Model
     protected $fillable = [
         'title', 'serial', 'description', 'requirement', 'projectFile', 'ownBy', 
         'percentageComplete', 'startDate', 'completeDate', 'deliveryDate', 
-        'isDelivered', 'feedback',
+        'isDelivered', 'feedback','category'
     ];
 
     protected $dates = [
