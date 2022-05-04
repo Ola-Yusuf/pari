@@ -102,9 +102,6 @@
                         <li class="nav-item">
                             <a class="nav-link " href="{{route('admin.view.invoices')}}">View All Invoices</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="{{route('admin.view.payments')}}">View All Payments</a>
-                        </li>
                     </ul>
                 </div>
             </li>

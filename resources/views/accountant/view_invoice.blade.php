@@ -59,21 +59,10 @@
                       </a>
                       <div class="dropdown-menu" aria-labelledby="dropdownTeamOne">
                         <a class="dropdown-item"
-                          href="{{route('accountant.download.invoice',Crypt::encrypt($item->id))}}">Download</a>
-                        <a class="dropdown-item"
                           href="{{route('accountant.show.invoice',Crypt::encrypt($item->id))}}">Show Details</a>
-                        @if(!($item->isPayEvidenceApproved && $item->paymentEvidence))
-                        @if(!$item->isPayEvidenceApproved && $item->paymentEvidence )
-                        <a class="dropdown-item"
-                          href="{{route('accountant.confirm.payment.invoice',Crypt::encrypt($item->id))}}">
-                          Confirm Payment
-                        </a>
-                        @else
                         <a class="dropdown-item" href="{{route('accountant.edit.invoice',Crypt::encrypt($item->id))}}">
                           Edit Details
                         </a>
-                        @endif
-                        @endif
                         <a class="dropdown-item" href="{{route('accountant.delete.invoice',Crypt::encrypt($item->id))}}"
                           style="color:red;">Delete</a>
                       </div>

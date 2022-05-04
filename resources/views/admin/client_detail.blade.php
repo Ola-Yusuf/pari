@@ -26,8 +26,8 @@
               <h6 class="text-uppercase fs-5 ls-2">Full Name </h6>
               <div class="d-flex align-items-center">
                 <div>
-                  <img src="{{$client->avatar ? asset($client->avatar) : asset('defaultAvatar.png')}}"
-                    alt="" class="avatar-md avatar rounded-circle">
+                  <img src="{{$client->avatar ? asset($client->avatar) : asset('defaultAvatar.png')}}" alt=""
+                    class="avatar-md avatar rounded-circle">
                 </div>
                 <div class="ms-3 lh-1">
                   <h5 class="fw-bold mb-1">{{$client->fname}}</h5>
@@ -38,26 +38,24 @@
           </div>
           <div>
             <div class="dropdown dropstart">
-              <a class="text-muted text-primary-hover" href="#"
-                role="button" id="dropdownTeamOne"
-                data-bs-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false"> 
-                  <i class="icon-l" data-feather="more-vertical"></i>
+              <a class="text-muted text-primary-hover" href="#" role="button" id="dropdownTeamOne"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="icon-l" data-feather="more-vertical"></i>
               </a>
-              <div class="dropdown-menu"
-                aria-labelledby="dropdownTeamOne">
-                <a class="dropdown-item" href="{{route('admin.edit.client', Crypt::encrypt($client->id))}}">Edit Client</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownTeamOne">
+                <a class="dropdown-item" href="{{route('admin.edit.client', Crypt::encrypt($client->id))}}">Edit
+                  Client</a>
                 <a class="dropdown-item" href="{{route('admin.delete.client',Crypt::encrypt($client->id))}}"
-                    onclick=" return confirm('Note: \n\nAll Projects Related To This Client Will Be Deleted. \n\nAre you sure you want to delete Client data? \n\nClick OK to proceed.');"
-                  ><strong style="color: red"> Delete </strong>
+                  onclick=" return confirm('Note: \n\nAll Projects Related To This Client Will Be Deleted. \n\nAre you sure you want to delete Client data? \n\nClick OK to proceed.');"><strong
+                    style="color: red"> Delete </strong>
                 </a>
                 <a class="dropdown-item" href="{{route('admin.reset.client.password',Crypt::encrypt($client->id))}}"
-                  onclick=" return confirm('Note: \n\nThis Client Password Will be Changed to CMS-Client. \n\nClick OK to proceed.');"
-                  ><strong style="color:brown"> Reset Password </strong>
+                  onclick=" return confirm('Note: \n\nThis Client Password Will be Changed to CMS-Client. \n\nClick OK to proceed.');"><strong
+                    style="color:brown"> Reset Password </strong>
                 </a>
               </div>
             </div>
-            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -66,72 +64,72 @@
   <div class="py-6">
     <!-- row -->
     <div class="row">
-        <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
-          <!-- card -->
-          <div class="card">
-            <!-- card body -->
-            <div class="card-body">
-              <!-- card title -->
-              {{-- <h4 class="card-title mb-4">About Me</h4> --}}
-              <!-- row -->
-              <div class="row">
-                <div class="col-6 mb-5">
-                  <!-- text -->
-                  <h6 class="text-uppercase fs-5 ls-2">Username
-                  </h6>
-                  <p class="mb-0">{{$client->username ? $client->username : 'xxx xx'}}</p>
-                </div>
-                <div class="col-6 mb-5">
-                  <!-- text -->
-                  <h6 class="text-uppercase fs-5 ls-2">Gender
-                  </h6>
-                  <p class="mb-0" align='justify'>{{$client->gender}}</p>
-                </div>
-                <div class="col-12 mb-5">
-                  <h6 class="text-uppercase fs-5 ls-2">Address
-                  </h6>
-                  <p class="mb-0" align='justify'>{{$client->address}}</p>
-                </div>
-            </div>
-            </div>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
-            <!-- card -->
-            <div class="card">
-              <!-- card body -->
-              <div class="card-body">
-                <!-- card title -->
-                {{-- <h4 class="card-title mb-4">About Me</h4> --}}
-                <!-- row -->
-                <div class="row">
-                  <div class="col-6 mb-5">
-                    <h6 class="text-uppercase fs-5 ls-2">Email </h6>
-                    <p class="mb-0">{{$client->email ? $client->email : 'Not Available'}}</p>
-                  </div>
-                  <div class="col-6 mb-5">
-                    <h6 class="text-uppercase fs-5 ls-2">Phone Number
-                    </h6>
-                    <p class="mb-0">{{$client->tel ? $client->tel : 'Not Available'}}</p>
-                  </div>
-                  <div class="col-6 mb-5">
-                    <!-- text -->
-                    <h6 class="text-uppercase fs-5 ls-2">Total Project
-                    </h6>
-                    <p class="mb-0">{{$client->projects->count()}}</p>
-                  </div>
-                  <div class="col-6 mb-5">
-                    <!-- text -->
-                    <h6 class="text-uppercase fs-5 ls-2">Delivered Project
-                    </h6>
-                    <p class="mb-0">{{$client->projects->where('isDelivered',1)->count()}}</p>
-                  </div>
-                </div>
+      <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
+        <!-- card -->
+        <div class="card">
+          <!-- card body -->
+          <div class="card-body">
+            <!-- card title -->
+            {{-- <h4 class="card-title mb-4">About Me</h4> --}}
+            <!-- row -->
+            <div class="row">
+              <div class="col-6 mb-5">
+                <!-- text -->
+                <h6 class="text-uppercase fs-5 ls-2">Username
+                </h6>
+                <p class="mb-0">{{$client->username ? $client->username : 'xxx xx'}}</p>
+              </div>
+              <div class="col-6 mb-5">
+                <!-- text -->
+                <h6 class="text-uppercase fs-5 ls-2">Gender
+                </h6>
+                <p class="mb-0" align='justify'>{{$client->gender}}</p>
+              </div>
+              <div class="col-12 mb-5">
+                <h6 class="text-uppercase fs-5 ls-2">Address
+                </h6>
+                <p class="mb-0" align='justify'>{{$client->address}}</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
+        <!-- card -->
+        <div class="card">
+          <!-- card body -->
+          <div class="card-body">
+            <!-- card title -->
+            {{-- <h4 class="card-title mb-4">About Me</h4> --}}
+            <!-- row -->
+            <div class="row">
+              <div class="col-6 mb-5">
+                <h6 class="text-uppercase fs-5 ls-2">Email </h6>
+                <p class="mb-0">{{$client->email ? $client->email : 'Not Available'}}</p>
+              </div>
+              <div class="col-6 mb-5">
+                <h6 class="text-uppercase fs-5 ls-2">Phone Number
+                </h6>
+                <p class="mb-0">{{$client->tel ? $client->tel : 'Not Available'}}</p>
+              </div>
+              <div class="col-6 mb-5">
+                <!-- text -->
+                <h6 class="text-uppercase fs-5 ls-2">Total Product/Service
+                </h6>
+                <p class="mb-0">{{$client->projects->count()}}</p>
+              </div>
+              <div class="col-6 mb-5">
+                <!-- text -->
+                <h6 class="text-uppercase fs-5 ls-2">Delivered Product/Service
+                </h6>
+                <p class="mb-0">{{$client->projects->where('isDelivered',1)->count()}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 </div>
 @endsection

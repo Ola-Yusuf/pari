@@ -31,7 +31,7 @@
                 @foreach ($project as $key => $item)
                 <tr>
                   <td class="align-middle">{{$key + 1}}</td>
-                  <td class="align-middle">{{$item->category}}</td>
+                  <td class="align-middle">{{Str::limit($item->category, 20,'...' )}}</td>
                   <td class="align-middle">
                     <div class="d-flex align-items-center">
                       <div class="ms-3 lh-1">
