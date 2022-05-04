@@ -64,21 +64,7 @@
         <div class="modal-body">
           <form method="POST" action="{{route('admin.reset.password')}}">
             @csrf
-            {{-- <div class="form-group row">
-              <label for="oldPassword" class="col-md-4 col-form-label text-md-right">{{ __('Old Password') }}</label>
 
-              <div class="col-md-6">
-                <input id="oldPassword" type="password" class="form-control @error('oldPassword') is-invalid @enderror"
-                  name="oldPassword" required>
-
-                @error('oldPassword')
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-              </div>
-            </div>
-            <br> --}}
             <div class="form-group row">
               <label for="newPassword" class="col-md-4 col-form-label text-md-right">{{ __('New Password') }}</label>
 
