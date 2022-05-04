@@ -79,6 +79,7 @@ return array(
     'App\\Models\\Admin' => $baseDir . '/app/Models/Admin.php',
     'App\\Models\\Client' => $baseDir . '/app/Models/Client.php',
     'App\\Models\\Invoice' => $baseDir . '/app/Models/Invoice.php',
+    'App\\Models\\Newsletter' => $baseDir . '/app/Models/Newsletter.php',
     'App\\Models\\Project' => $baseDir . '/app/Models/Project.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Notifications\\Accountant\\Auth\\ResetPassword' => $baseDir . '/app/Notifications/Accountant/Auth/ResetPassword.php',
